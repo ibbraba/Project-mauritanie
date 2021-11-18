@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Recit{% endblock %}
+
+{% block body %}
+    <h1>Create new Recit</h1>
+
+    {{ include('recit/_form.html.twig') }}
+
+    <a href="{{ path('recit_index') }}">back to list</a>
+{% endblock %}

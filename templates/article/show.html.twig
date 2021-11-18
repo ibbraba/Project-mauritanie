@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block content %}
+    <h3>Article</h3>
+
+   <div class="article-fullcontent" style="background-color:#fff;padding: 30px;text-align: justify;">
+
+
+
+       {% if article.image %}
+       <img src="{{ asset('/build/images/' ~ article.image)  }}" class="card-img-top" alt="...">
+       {% else %}
+       <img src="{{ asset('/build/images/flag.jpg' )  }}" class="card-img-top" alt="drapeau mauritanie">
+       {% endif %}
+       <h3>{{ article.titre }} </h3>
+
+       <p>{{ article.preview }}</p>
+
+       <div>
+
+           {{ article.contenu | raw }}
+       </div>
+
+
+
+
+
+
+
+
+
+   </div>
+
+    <a class="btn btn-primary" href="{{ path('article') }}">Retour aux articles</a>
+    <a class="btn btn-light" href="{{ path('main') }}">Retour à la page d'acceuil</a>
+
+{% endblock %}

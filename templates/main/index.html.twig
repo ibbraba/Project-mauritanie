@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zone Mauritanienne{% endblock %}
+
+
+
+{% block content %}
+
+
+    <div class="welcome"> <h1>Bienvenue sur Zone Mauritanienne</h1>
+    <p>Découvrez tout ce que la Mauritanie a de plus beau a nous offrir</p>
+
+        <a href="#section"><i  class="fleche-down fas fa-angle-double-down"></i></a>
+    </div>
+
+
+
+    {# TODO Resize image to same dimensions #}
+    <div id="section" class="index index-articles">
+
+        <h4>Articles à la une</h4>
+        <div class="articles-card">
+            {% for article in articles %}
+            <div class="index-card card" style="width: 33.3%;">
+                {% if article.image %}
+                <img src="{{ asset('/build/images/' ~ article.image)  }}" class="card-img-top" alt="...">
+                {% else %}
+                <img src="{{ asset('/build/images/flag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }} </h5>
+                    <p class="card-text">{{ article.preview }}</p>
+                    <a href="{{ path("article_show", {id:article.id} )}}" class="btn btn-light">Lire l'article</a>
+                </div>
+            </div>
+
+
+
+
+            {% endfor %}
+
+        </div>
+
+
+
+
+        <a class="btn btn-light" href="{{ path('article') }}" class="visit"> > Voir tous les articles</a>
+
+    </div>
+
+
+
+    <div class="index index-recits">
+        <h4>Des récits variés proposés par des mauritaniens </h4>
+        <div class="recits-card">
+            {% for recit in recits %}
+                <div class="index-card card" style="width: 33.3%;">
+                    {% if recit.image %}
+                        <img src="..." class="card-img-top" alt="...">
+                    {% else %}
+                        <img src="{{ asset('/build/images/flag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recit.titre }} </h5>
+                        <p class="card-text">{{ recit.description }}</p>
+                        <a href="{{ path("recit_show", {id:recit.id})  }}" class="btn btn-light">Lire le récit</a>
+                    </div>
+                </div>
+
+
+
+
+            {% endfor %}
+
+        </div>
+
+
+
+
+        <a class="btn btn-light" href="{{ path("recits") }}"> > Voir tous les récits</a>
+
+
+    </div>
+
+
+    <div class="index">
+        <h4 class="index-join">Rejoignez-nous et partagez votre culture mauritanienne</h4>
+
+        <a class="btn btn-light" href=""> > Nous rejoindre</a>
+
+    </div>
+
+
+    {# TODO create transparent AD divs #}
+
+
+        <div class="index">
+            <h4>Notre Portfolio</h4>
+            <div class="index-portfolio-container">
+            <div class="index-portfolio" style="background-color: grey; color: white; height: 300px; width: 300px " >300*300</div>
+            <div class="index-portfolio" style="background-color: grey; color: white; height: 300px; width: 300px " >300*300</div>
+            <div class="index-portfolio" style="background-color: grey; color: white; height: 300px; width: 300px " >300*300</div>
+            <div class="index-portfolio" style="background-color: grey; color: white; height: 300px; width: 300px " >300*300</div>
+        </div>
+
+        <a class="btn btn-light" href=""> > Voir notre portfolio</a>
+        </div>
+
+
+    {# TODO FOOTER - legal mention + politics #}
+
+{% endblock %}
+
+
+
+
+

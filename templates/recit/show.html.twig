@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recit{% endblock %}
+
+{% block content %}
+    <h1>Recit</h1>
+
+    <div class="recit-fullcontent" style="background-color:#fff;padding: 30px;text-align: justify;">
+
+
+        <h3>{{ recit.titre }} </h3>
+        <p> écrit par {{ recit.author }}</p>
+        <p>{{ recit.description | raw }}</p>
+
+        <div>
+
+            {{ recit.content }}
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <a class="btn btn-secondary" href="{{ path('recits') }}">Retour aux récits</a>
+
+
+{% endblock %}

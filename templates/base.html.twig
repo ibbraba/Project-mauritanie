@@ -6,14 +6,61 @@
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body {{ stimulus_controller('symfony/ux-swup/swup') }} data-theme="fade">
+        {% block body %}
+        {% block header %}
+        <header>
+            <a class="header-a" style="text-decoration: none" href="{{ path('main') }}"><p  class="main-title">Zone Mauritanienne</p></a>
+
+
+            <meta aria-roledescription="".
+            >
+        <nav class="navbar navbar-dark  header-nav">
+        <ul class="header-ul">
+            <a class="col btn btn-dark header-link" href="{{ path("article") }}"> <li class="header-item"> Articles </li> </a>
+            <a class="col btn btn-dark header-link" href="{{ path('discover') }}"><li class="header-item"> Découverte </li></a>
+            <a class="col btn btn-dark header-link" href="{{ path('recits') }}"><li class="header-item"> Récits </li></a>
+            <a class="col btn btn-dark header-link" href="{{ path('culture') }}"><li class="header-item"> Culture </li></a>
+{#            <a href="{{ path('histoire') }}"><li class="header-item"> Histoire </li></a>#}
+
+        </ul>
+
+        </nav>
+
+        </header>
+
+
+
+        {% endblock %}
+
+
+
+        <div class="container-fluid page-container">
+            <main id="swup">
+            {% block content%}
+            {% endblock%}
+            </main>
+        </div>
+
+        {% block footer%} {% endblock%}
+
+
+
+
+
+
+
+
+        {% endblock %}
     </body>
 </html>

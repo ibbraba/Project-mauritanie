@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recit index{% endblock %}
+
+{% block body %}
+    <h1>Recit index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Content</th>
+                <th>Date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for recit in recits %}
+            <tr>
+                <td>{{ recit.id }}</td>
+                <td>{{ recit.author }}</td>
+                <td>{{ recit.description }}</td>
+                <td>{{ recit.content }}</td>
+                <td>{{ recit.date ? recit.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('recit_show', {'id': recit.id}) }}">show</a>
+                    <a href="{{ path('recit_edit', {'id': recit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('recit_new') }}">Create new</a>
+{% endblock %}
