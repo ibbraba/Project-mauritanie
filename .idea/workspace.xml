@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8c79a-4c4e-4e6e-bbb2-1beec18fc726" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/styles/article.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/culture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/culture.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/discover.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/discover.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/recits.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/recits.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +231,10 @@
       <workItem from="1637263803605" duration="2955000" />
       <workItem from="1637341602216" duration="804000" />
       <workItem from="1637664853747" duration="2000" />
-      <workItem from="1638793981934" duration="6704000" />
+      <workItem from="1638793981934" duration="6901000" />
+      <workItem from="1638970544589" duration="3836000" />
+      <workItem from="1639404694839" duration="576000" />
+      <workItem from="1639409010208" duration="8354000" />
     </task>
     <servers />
   </component>
@@ -235,7 +246,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="tests" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -2,9 +2,13 @@
 
 
 {% block content %}
+    <div class="title-section">
+   <h1 class="article-section-title"> Articles sur la Mauritanie  </h1>
+    <p>Nos meilleurs articles sont ici. Découvrez en plus sur la Mauritanie.</p>
+    </div>
 
-<h2>Nos derniers articles </h2>
-
+<h4>Nos derniers articles </h4>
+<div class="article-section">
 {% for article in list %}
     <div class="card" style="width: 18rem;">
         <img src="{{ asset('/build/images/' ~ article.image) }}" class="card-img-top" alt="...">
@@ -18,5 +22,7 @@
 
 
 {% endfor %}
+</div>
 
+    <button class="btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
 {% endblock %}

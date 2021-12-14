@@ -1,0 +1,25 @@
+.article-section-title{
+    text-align: center;
+    margin: 25px;
+    font-weight: 900;
+    font-size: 3.3rem;
+    color: var(--dark);
+}
+
+
+
+.article-section{
+display: flex;
+justify-content: space-around;
+}
+
+.title-section p {
+    text-align: center;
+    color: var(--dark);
+    font-size: 23px;
+}
+
+.yt{
+    text-align: center;
+    margin: 200px 0;
+}

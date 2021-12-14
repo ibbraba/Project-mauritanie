@@ -1,1 +1,32 @@
 {% extends 'base.html.twig' %}
+
+
+{% block content %}
+<div class="title-section">
+    <h2 class="article-section-title"> Discover Mauritania </h2>
+    <p> La Mauritanie au coeur de nombreux événements. Découvrez l'ensemble des contenus médias sur la Mauritanie. </p>
+</div>
+
+
+    <div class="discover-section">
+        <div class="yt">
+
+            <iframe width="900" height="506" src="https://www.youtube.com/embed/aFp1Rfa2zSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+
+
+        <div class="partenaires">
+
+            <span>Liste de partenaires.</span>
+        </div>
+
+
+        <div class="twitter">Tweet Related to Mauritania.</div>
+
+
+
+    </div>
+    <button class="btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
+
+{% endblock %}

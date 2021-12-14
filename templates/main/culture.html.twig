@@ -7,15 +7,35 @@
    {{ parent () }}
 
 {% block content %}
-.
-    <div class="culture-item"> Tourisme  </div>
-    <div class="culture-item"> Musique </div>
-    <div class="culture-item"> Littérature </div>
-    <div class="culture-item"> Cuisine </div>
+
+    <div class="title-setion">
+        <h1 class="article-section-title">Culture Mauritanienne</h1>
+        <p>Toute la culture d'un pays aux multitudes d'éthnies.</p>
+
+    </div>
+
+
+    <div class="culture-item">
+        <h3>Tourisme</h3>
+
+    </div>
+
+    <div class="culture-item">
+        <h3>Musique</h3>
+
+    </div>
+
+    <div class="culture-item">
+        <h3>Littérature</h3>
+    </div>
+
+    <div class="culture-item">
+        <h3>Cuisine</h3>
+    </div>
 
 {% endblock %}
 
 </div>
 
-
+    <button class="btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
 {% endblock %}

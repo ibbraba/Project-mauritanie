@@ -10,7 +10,8 @@
     <div class="welcome"> <h1>Bienvenue sur Zone Mauritanienne</h1>
     <p>Découvrez tout ce que la Mauritanie a de plus beau a nous offrir</p>
 
-        <a href="#section"><i  class="fleche-down fas fa-angle-double-down"></i></a>
+        <a href="#section">Click Me</a>
+        <i class="fleche-down fas fa-angle-double-down"></i>
     </div>
 
 
@@ -58,6 +59,7 @@
                     {% if recit.image %}
                         <img src="..." class="card-img-top" alt="...">
                     {% else %}
+
                         <img src="{{ asset('/build/images/flag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
                     {% endif %}
                     <div class="card-body">

@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-<div style="text-align: center; color: var(--secondary)">
-<h2>Récits</h2>
+<div class="title-section" style="text-align: center; color: var(--light)">
+<h2 class="article-section-title">Récits</h2>
   <p> Les récits sont des histoires de notre mémoire que nous vous partageons avec le coeur. Chaque personne a une histoire
   à vous raconter et nous esperons que nos récits vous feront découvrir plein de nouvelles choses. Découvrez tous nos récits
-  dans cette rubrique
+  dans cette rubrique.
   </p>
 </div>
 
 
-  <div class="recits-list">
+  <div class="article-section">
     {% for recit in list %}
 
       <div class="card w-50">
         <div class="card-body">
           <h5 class="card-title">{{ recit.titre }}</h5>
           <p class="card-text">{{ recit.description }}</p>
-          <a href="{{ path("recit_show", {id:recit.id} ) }}" class="btn btn-warning">Lire le récit</a>
+          <a href="{{ path("recit_show", {id:recit.id} ) }}" class="btn btn-dark">Lire le récit</a>
         </div>
       </div>
 
@@ -26,4 +26,8 @@
 
 
   </div>
+
+
+
+  <button class="btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
 {% endblock %}

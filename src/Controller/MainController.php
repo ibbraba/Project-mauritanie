@@ -109,7 +109,6 @@ class MainController extends AbstractController
      * @Route ("/portfolio", name="portfolio")
      *
      */
-
     /* TODO create portfolio */
     public function portfolio():Response {
         return $this->render('main/culture.html.twig', [
