@@ -7,11 +7,13 @@
 {% block content %}
 
 
-    <div class="welcome"> <h1>Bienvenue sur Zone Mauritanienne</h1>
+    <div name="top" class="welcome"> <h1>Bienvenue sur Zone Mauritanienne</h1>
     <p>Découvrez tout ce que la Mauritanie a de plus beau a nous offrir</p>
 
-        <a href="#section">Click Me</a>
-        <i class="fleche-down fas fa-angle-double-down"></i>
+
+        {#TODO: Fix scroll arrow bug#}
+
+        <i href="#section" class="fleche-down fas fa-angle-double-down"></i>
     </div>
 
 
@@ -24,9 +26,9 @@
             {% for article in articles %}
             <div class="index-card card" style="width: 33.3%;">
                 {% if article.image %}
-                <img src="{{ asset('/build/images/' ~ article.image)  }}" class="card-img-top" alt="...">
+                <img src="{{ asset('/build/images/' ~ article.image) | imagine_filter('index')  }}" class="card-img-top" alt="...">
                 {% else %}
-                <img src="{{ asset('/build/images/flag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
+                <img src="{{ asset('/build/images/flag.jpg' ) | imagine_filter('index') }}" class="card-img-top" alt="drapeau mauritanie">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ article.titre }} </h5>

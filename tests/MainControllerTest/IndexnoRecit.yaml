@@ -1,0 +1,6 @@
+App\Entity\Article:
+  article{1..6}:
+    titre: "titre <current()>"
+    contenu: "test de contenu"
+    preview: "Lets(goooo"
+    date: <dateTime()>

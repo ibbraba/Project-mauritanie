@@ -14,7 +14,7 @@
 
         <div>
 
-            {{ recit.content }}
+            {{ recit.content | raw }}
         </div>
 
 
@@ -27,7 +27,7 @@
 
     </div>
 
-    <a class="btn btn-secondary" href="{{ path('recits') }}">Retour aux récits</a>
-
+   <button class="btn btn-primary" ><a style="color: white !important;" href="{{ path('recits') }}">Retour aux récits</a></button>
+    <button class="btn btn-light"><a style="color: white !important;" href="{{ path('main') }}">Retour à l'acceuil</a></button>
 
 {% endblock %}

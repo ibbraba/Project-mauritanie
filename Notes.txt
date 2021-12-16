@@ -1,0 +1,13 @@
+NOTES AND TODOS :
+
+
+
+16/12/21 (WAS FUN) :
+- CSS Categories pages
+- Fixing LiipImagine bug (TODO: Resize all images to same height)
+- Index Functionnal tests and Categories functionnal test made
+   => TODO: Check if only and all loaded articles in articles ...
+
+TODO: BackEnd functionnal tests + Security login tests
+
+

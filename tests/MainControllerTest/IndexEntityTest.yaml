@@ -1,0 +1,7 @@
+App\Entity\Recit:
+    recit{1..5}:
+      titre: "recit<current()>"
+      content: "ookokokookok"
+      description: "Voyonss"
+      author: "Moi"
+      date: <dateTime()>

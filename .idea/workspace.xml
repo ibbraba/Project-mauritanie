@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8c79a-4c4e-4e6e-bbb2-1beec18fc726" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles/article.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/MainControllerTest/CategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/MainControllerTest/IndexEntityTest.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/MainControllerTest/IndexPageTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/MainControllerTest/IndexnoRecit.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Mauritanieproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mauritanieproject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/article.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IntgController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IntgController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/article.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/culture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/culture.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/discover.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/discover.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/recits.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/recits.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recit/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recit/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +193,9 @@
       <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/ux-swup" />
       <path value="$PROJECT_DIR$/vendor/liip/test-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/alice" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/theofidry/alice-data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1yVH5PT1mxmCbFQwYYFREqh5HLq" />
@@ -234,7 +251,8 @@
       <workItem from="1638793981934" duration="6901000" />
       <workItem from="1638970544589" duration="3836000" />
       <workItem from="1639404694839" duration="576000" />
-      <workItem from="1639409010208" duration="8354000" />
+      <workItem from="1639409010208" duration="15433000" />
+      <workItem from="1639640205242" duration="10684000" />
     </task>
     <servers />
   </component>

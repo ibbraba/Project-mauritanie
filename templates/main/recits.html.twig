@@ -9,11 +9,13 @@
   </p>
 </div>
 
+  <h3 class="title-page-section">Nos Récits</h3>
+  <div class="recit-section">
 
-  <div class="article-section">
+
     {% for recit in list %}
 
-      <div class="card w-50">
+      <div class="card w-80">
         <div class="card-body">
           <h5 class="card-title">{{ recit.titre }}</h5>
           <p class="card-text">{{ recit.description }}</p>
@@ -29,5 +31,5 @@
 
 
 
-  <button class="btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
+  <button class="back-main btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
 {% endblock %}

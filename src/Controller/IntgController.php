@@ -46,8 +46,8 @@ class IntgController extends AbstractController
     public function new(Request $request): Response
     {
         $recit = new Recit();
-        $recit->setDate(new \DateTime(("now")));
         $form = $this->createForm(RecitType::class, $recit);
+        $recit->setDate(new \DateTime(("now")));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

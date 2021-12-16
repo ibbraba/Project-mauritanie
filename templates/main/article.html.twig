@@ -7,15 +7,15 @@
     <p>Nos meilleurs articles sont ici. Découvrez en plus sur la Mauritanie.</p>
     </div>
 
-<h4>Nos derniers articles </h4>
+<h4 class="title-page-section">Nos derniers articles </h4>
 <div class="article-section">
 {% for article in list %}
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 21rem; border: 2px solid var(--light);">
         <img src="{{ asset('/build/images/' ~ article.image) }}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ article.titre }}</h5>
             <p class="card-text">{{ article.preview}}</p>
-            <a href="{{ path("article_show", {id:article.id} ) }}" class="btn btn-primary">Go somewhere</a>
+            <a style="color: white !important;" href="{{ path("article_show", {id:article.id} ) }}" class="btn btn-primary">Lire l'article</a>
         </div>
     </div>
 
@@ -24,5 +24,5 @@
 {% endfor %}
 </div>
 
-    <button class="btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
+    <button class="back-main btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
 {% endblock %}

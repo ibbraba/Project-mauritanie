@@ -70,7 +70,7 @@ class MainController extends AbstractController
 
 
     /**
-     * @Route("/Recits", name="recits")
+     * @Route("/recits", name="recits")
      */
     public function Recits(RecitRepository $recitRepository): Response
     {

@@ -13,13 +13,35 @@ display: flex;
 justify-content: space-around;
 }
 
+.recit-section{
+    margin-left: 5%;
+}
+
+.title-section{
+    margin-bottom: 60px;
+}
+
 .title-section p {
     text-align: center;
     color: var(--dark);
     font-size: 23px;
+    margin: 0% 5%;
 }
 
 .yt{
     text-align: center;
     margin: 200px 0;
 }
+
+.title-page-section{
+    margin: 3% 5%;
+    color: var(--light)
+}
+
+.back-main{
+    margin: 5%;
+}
+.back-main a{
+    color: white !important;
+}
+
