@@ -11,8 +11,8 @@ NOTES AND TODOS :
 TODO: BackEnd functionnal tests + Security login tests
 
 
-17/12/21:
+17/12/21 (HARD=:
 -Security Controller tested
 -[FIXED] bug : Impossible to test login OK with good credentials => fixtures loaded but form dosent work
-
+-Article/Recit forms tested
 
