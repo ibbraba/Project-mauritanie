@@ -54,8 +54,8 @@ class IntgController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($recit);
             $entityManager->flush();
-
-            return $this->redirectToRoute('recit_index', [], Response::HTTP_SEE_OTHER);
+            $this->addFlash("success", "Votre récit a bien été créée !");
+            return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('recit/new.html.twig', [
@@ -78,8 +78,8 @@ class IntgController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($article);
             $entityManager->flush();
-
-            return $this->redirectToRoute('culture', [], Response::HTTP_SEE_OTHER);
+            $this->addFlash("success", "Votre article a bien été créée ! ");
+            return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('article/new.html.twig', [
@@ -99,9 +99,10 @@ class IntgController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($recit);
             $entityManager->flush();
+            $this->addFlash('success', 'Récit supprimé !');
         }
 
-        return $this->redirectToRoute('recit_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
     }
 
 
@@ -121,8 +122,9 @@ class IntgController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash("success" , "Récit modifié !");
 
-            return $this->redirectToRoute('recit_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('recit/edit.html.twig', [
@@ -143,9 +145,10 @@ class IntgController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash("success","Article modifié !");
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('article/edit.html.twig', [
@@ -163,9 +166,10 @@ class IntgController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($article);
             $entityManager->flush();
+            $this->addFlash('success', 'Article supprimé !');
         }
 
-        return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
     }
 
 

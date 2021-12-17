@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8c79a-4c4e-4e6e-bbb2-1beec18fc726" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/TestFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/SecurityControllerTest/SecurityControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/SecurityControllerTest/SecurityFixtures.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/PostsFormTest/PostFixtures.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/PostsFormTest/PostsFormTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/PostsFormTest/UserFixtures.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IntgController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IntgController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/intg/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/intg/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recit/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recit/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recit/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recit/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recit/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,13 +199,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/PostsFormTest" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Mauritanieproject\tests\PostsFormTest" />
       <recent name="C:\wamp64\www\Mauritanieproject\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -237,7 +246,7 @@
       <workItem from="1639404694839" duration="576000" />
       <workItem from="1639409010208" duration="15433000" />
       <workItem from="1639640205242" duration="11437000" />
-      <workItem from="1639749044424" duration="5241000" />
+      <workItem from="1639749044424" duration="14211000" />
     </task>
     <servers />
   </component>

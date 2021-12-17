@@ -13,5 +13,6 @@ TODO: BackEnd functionnal tests + Security login tests
 
 17/12/21:
 -Security Controller tested
--bug : Impossible to test login OK with good credentials => fixtures loaded but form dosent work
+-[FIXED] bug : Impossible to test login OK with good credentials => fixtures loaded but form dosent work
+
 
