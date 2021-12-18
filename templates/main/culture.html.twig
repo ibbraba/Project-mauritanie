@@ -2,10 +2,6 @@
 
 
 
-{% block body %}
-<div class="content-container">
-   {{ parent () }}
-
 {% block content %}
 
     <div class="title-setion">
@@ -14,30 +10,31 @@
 
     </div>
 
-
+<div class="culture-box">
     <div class="culture-item">
         {#TODO Bring Country and cities stories#}
         <h3 class="title-page-section">Tourisme</h3>
-
+        <img src=" {{ asset("/build/images/desertCamel.jpg") | imagine_filter('index')  }}" alt="Tourisme désert">
     </div>
 
     <div class="culture-item">
         {#TODO Find some Mauritanians artists#}
         <h3 class="title-page-section">Musique</h3>
+        <img src=" {{ asset("/build/images/desertCamel.jpg") | imagine_filter('index') }}" alt="">
 
     </div>
 
     <div class="culture-item">
         <h3 class="title-page-section">Littérature</h3>
+        <img src=" {{ asset("/build/images/desertCamel.jpg") | imagine_filter('index') }}" alt="">
     </div>
 
     <div class="culture-item">
         <h3 class="title-page-section">Cuisine</h3>
+        <img src=" {{ asset("/build/images/desertCamel.jpg") | imagine_filter('index') }}" alt="">
     </div>
-
-{% endblock %}
-
 </div>
+
 
     <button class="back-main btn btn-light"><a href="{{ path('main') }}">Retour à l'acceuil</a></button>
 {% endblock %}

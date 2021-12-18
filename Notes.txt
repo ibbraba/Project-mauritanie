@@ -11,8 +11,15 @@ NOTES AND TODOS :
 TODO: BackEnd functionnal tests + Security login tests
 
 
-17/12/21 (HARD=:
+17/12/21 (HARD)
 -Security Controller tested
 -[FIXED] bug : Impossible to test login OK with good credentials => fixtures loaded but form dosent work
 -Article/Recit forms tested
 
+18/12/21 (Quick 1h session)
+-Idea : create a box for culutre category
+-Controller culutre created + entity cities
+
+TODO: Create ManyTOMany TAG table (to join with article, récits, cities ... )
+TODO: Make single page for articles in Culture fields
+TODO: Revisit article structure (main category + many tags)
