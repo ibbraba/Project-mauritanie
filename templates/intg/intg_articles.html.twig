@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+
+    <h1 class="margin-60 center">Article Admin page</h1>
+
+    <div class="intg-article-new margin-60 center">
+        <button class="btn btn-dark"><a href="{{ path('article_new') }}">Créer un article</a></button>
+
+    </div>
+
+    <h3>Liste des Articles</h3>
+    <div class="articles-card margin-60 center">
+
+        {% for article in articleList %}
+            <div class="index-card card" style="width: 33.3%;">
+                {% if article.image %}
+                    <img src="{{ asset('/build/images/' ~ article.image) | imagine_filter('index')  }}" class="card-img-top" alt="...">
+                {% else %}
+                    <img src="{{ asset('/build/images/flag.jpg' ) | imagine_filter('index') }}" class="card-img-top" alt="drapeau mauritanie">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.titre }} </h5>
+                    <p class="card-text">{{ article.preview }}</p>
+                    <a href="{{ path("article_show", {id:article.id} )}}" class="btn btn-light">Lire l'article</a>
+                </div>
+            </div>
+
+
+
+
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}

@@ -164,20 +164,6 @@ header{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     margin-top: 60px;
     background-color: var(--primary);
@@ -200,4 +186,12 @@ footer a {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.center{
+    text-align: center;
+}
+
+.margin-60{
+    margin: 60px 0px;
 }

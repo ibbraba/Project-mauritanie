@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\VilleRepository;
+use App\Repository\TagRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=VilleRepository::class)
+ * @ORM\Entity(repositoryClass=TagRepository::class)
  */
-class Ville
+class Tag
 {
     /**
      * @ORM\Id
@@ -20,34 +20,19 @@ class Ville
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=400)
      */
-    private $nom;
+    private $name;
 
     /**
-     * @ORM\Column(type="string", length=600, nullable=true)
-     */
-    private $population;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Article::class, mappedBy="ville")
+     * @ORM\ManyToMany(targetEntity=Article::class, mappedBy="tags")
      */
     private $articles;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Recit::class, mappedBy="ville")
+     * @ORM\ManyToMany(targetEntity=Recit::class, mappedBy="tags")
      */
     private $recits;
-
-    /**
-     * @ORM\Column(type="string", length=600, nullable=true)
-     */
-    private $intro;
-
-    /**
-     * @ORM\Column(type="string", length=1200, nullable=true)
-     */
-    private $description;
 
     public function __construct()
     {
@@ -60,26 +45,14 @@ class Ville
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getName(): ?string
     {
-        return $this->nom;
+        return $this->name;
     }
 
-    public function setNom(string $nom): self
+    public function setName(string $name): self
     {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getPopulation(): ?string
-    {
-        return $this->population;
-    }
-
-    public function setPopulation(?string $population): self
-    {
-        $this->population = $population;
+        $this->name = $name;
 
         return $this;
     }
@@ -96,7 +69,7 @@ class Ville
     {
         if (!$this->articles->contains($article)) {
             $this->articles[] = $article;
-            $article->addVille($this);
+            $article->addTag($this);
         }
 
         return $this;
@@ -105,7 +78,7 @@ class Ville
     public function removeArticle(Article $article): self
     {
         if ($this->articles->removeElement($article)) {
-            $article->removeVille($this);
+            $article->removeTag($this);
         }
 
         return $this;
@@ -123,7 +96,7 @@ class Ville
     {
         if (!$this->recits->contains($recit)) {
             $this->recits[] = $recit;
-            $recit->addVille($this);
+            $recit->addTag($this);
         }
 
         return $this;
@@ -132,32 +105,8 @@ class Ville
     public function removeRecit(Recit $recit): self
     {
         if ($this->recits->removeElement($recit)) {
-            $recit->removeVille($this);
+            $recit->removeTag($this);
         }
-
-        return $this;
-    }
-
-    public function getIntro(): ?string
-    {
-        return $this->intro;
-    }
-
-    public function setIntro(?string $intro): self
-    {
-        $this->intro = $intro;
-
-        return $this;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(?string $description): self
-    {
-        $this->description = $description;
 
         return $this;
     }

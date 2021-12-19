@@ -13,41 +13,14 @@
 
 
 
-   <div>
+   <div class="">
        <h1>Bienvenue dans votre interface de gestion </h1>
 
         <p>Que voulez-vous faire</p>
 
-       <a class="btn btn-light" href="{{ path("recit_new") }}">Ecrire un récit</a>
-       <a class="btn btn-light" href="{{ path("article_new") }}">Ecrire un article</a>
+       <a class="btn btn-light" href="{{ path("intg_recit") }}">Catégorie Récits</a>
+       <a class="btn btn-light" href="{{ path("intg_article") }}">Catégorie Articles</a>
 
-       <div class="content-list" style="margin-top: 20px">
-        <div>
-            <ul>
-                {% for article in list %}
-                    <li>
-                        {{ article.titre }}
-                        {{ article.id }}
-                        <a class="btn btn-warning" href="{{ path("article_edit", {id:article.id} ) }}">Editer</a>
-                    </li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-       <div>
-           <ul>
-               {% for recit in recits %}
-                <li>
-                    {{ recit.description }}
-
-                    {{ recit.id }}
-                </li>
-
-               {% endfor %}
-           </ul>
-       </div>
-       </div>
 
 
    </div>

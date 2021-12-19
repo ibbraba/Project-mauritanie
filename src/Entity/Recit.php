@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\RecitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -51,6 +53,22 @@ class Recit
      * @ORM\Column(type="string", length=900, nullable=true)
      */
     private $image;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="recits")
+     */
+    private $tags;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Ville::class, inversedBy="recits")
+     */
+    private $ville;
+
+    public function __construct()
+    {
+        $this->tags = new ArrayCollection();
+        $this->ville = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -137,6 +155,54 @@ class Recit
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    public function addTag(Tag $tag): self
+    {
+        if (!$this->tags->contains($tag)) {
+            $this->tags[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): self
+    {
+        $this->tags->removeElement($tag);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ville[]
+     */
+    public function getVille(): Collection
+    {
+        return $this->ville;
+    }
+
+    public function addVille(Ville $ville): self
+    {
+        if (!$this->ville->contains($ville)) {
+            $this->ville[] = $ville;
+        }
+
+        return $this;
+    }
+
+    public function removeVille(Ville $ville): self
+    {
+        $this->ville->removeElement($ville);
 
         return $this;
     }

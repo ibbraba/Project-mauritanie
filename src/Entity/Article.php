@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ArticleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +48,22 @@ class Article
      * @ORM\Column(type="string", length=600, nullable=true)
      */
     private $image;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="articles")
+     */
+    private $tags;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Ville::class, inversedBy="articles")
+     */
+    private $ville;
+
+    public function __construct()
+    {
+        $this->tags = new ArrayCollection();
+        $this->ville = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -120,6 +138,54 @@ class Article
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    public function addTag(Tag $tag): self
+    {
+        if (!$this->tags->contains($tag)) {
+            $this->tags[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): self
+    {
+        $this->tags->removeElement($tag);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ville[]
+     */
+    public function getVille(): Collection
+    {
+        return $this->ville;
+    }
+
+    public function addVille(Ville $ville): self
+    {
+        if (!$this->ville->contains($ville)) {
+            $this->ville[] = $ville;
+        }
+
+        return $this;
+    }
+
+    public function removeVille(Ville $ville): self
+    {
+        $this->ville->removeElement($ville);
 
         return $this;
     }

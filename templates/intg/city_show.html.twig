@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+    <div class="city-presentation">
+
+        <h1>Ville de {{ city.nom }}</h1>
+
+        {% if city.description is null %}
+
+        Ville en construction ... Veuillez patienter
+
+        {% endif %}
+
+
+    </div>
+
+
+
+{% endblock %}

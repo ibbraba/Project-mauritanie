@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block content %}
+<ul>
+{% for city in citiesList %}
+    <li>{{ city.nom }}</li>
+{% endfor %}
+</ul>
+
+{% if citiesList is empty %}
+
+<h2>Aucune  ville trouvée :(</h2>
+
+{% endif %}
+
+ <div class="cities-add">
+     <h2>Ajouter une ville</h2>
+    {{ form(form) }}
+
+
+ </div>
+
+{% endblock %}

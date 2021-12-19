@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+
+    <h1 class="center margin-60">Recit Admin page</h1>
+
+    <div class="intg-article-new margin-60 center">
+        <button class="btn btn-dark"><a href="{{ path('recit_new') }}">Créer un Récit</a></button>
+
+    </div>
+
+    <h3>Liste des récits</h3>
+    <div class="recits-card margin-60 center">
+
+
+        {% for recit in recitList %}
+            <div class="index-card card" style="width: 33.3%;">
+                {% if recit.image %}
+                    <img src="..." class="card-img-top" alt="...">
+                {% else %}
+
+                    <img src="{{ asset('/build/images/flag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ recit.titre }} </h5>
+                    <p class="card-text">{{ recit.description }}</p>
+                    <a href="{{ path("recit_show", {id:recit.id})  }}" class="btn btn-light">Lire le récit</a>
+                </div>
+            </div>
+
+
+
+
+        {% endfor %}
+
+    </div>
+
+
+
+{% endblock %}

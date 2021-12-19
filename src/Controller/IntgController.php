@@ -4,10 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Entity\Recit;
+use App\Entity\Ville;
 use App\Form\ArticleType;
 use App\Form\RecitType;
+use App\Form\VilleType;
 use App\Repository\ArticleRepository;
 use App\Repository\RecitRepository;
+use App\Repository\VilleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -37,6 +40,30 @@ class IntgController extends AbstractController
             'recits' => $recits
 
         ]);
+    }
+
+
+    /**
+     * @Route ("/articlelist", name="intg_article")
+     */
+    public function intg_article(ArticleRepository $articleRepository){
+        $articleList= $articleRepository->findAll();
+
+        return $this->render('intg/intg_articles.html.twig', [
+            'articleList' => $articleList,
+        ]);
+    }
+
+    /**
+     * @Route ("/recitLitst", name="intg_recit")
+     */
+    public function intg_recit(RecitRepository $recitRepository){
+        $recitList = $recitRepository->findAll();
+
+        return $this->render('intg/intg_recits.html.twig', [
+            'recitList' => $recitList,
+        ]);
+
     }
 
 
@@ -173,9 +200,44 @@ class IntgController extends AbstractController
     }
 
 
+    /**
+     * @Route ("/cities", name="cities")
+     */
+    public function cities (Request $request, VilleRepository $villeRepository){
+
+        $citiesList = $villeRepository->findAll();
+
+        $city = new Ville();
+        $form = $this->createForm(VilleType::class, $city);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($city);
+            $entityManager->flush();
+            $this->addFlash("success","Ville ajoutée");
+        }
 
 
+        $this->redirectToRoute("cities", [], Response::HTTP_SEE_OTHER );
 
+
+        return $this->renderForm('intg/cities.html.twig', [
+            'citiesList' => $citiesList,
+            'form' => $form
+        ]);
+    }
+
+    /**
+     * @Route ("/cities/{id}/show", name="city_show")
+     */
+    public function city_show(Ville $ville){
+
+        return $this->render('intg/city_show.html.twig', [
+            'city' => $ville,
+        ]);
+
+    }
 
 }
 
