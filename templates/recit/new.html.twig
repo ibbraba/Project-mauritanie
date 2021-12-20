@@ -3,9 +3,11 @@
 {% block title %}New Recit{% endblock %}
 
 {% block content %}
+<div class="margin-60 center">
     <h1>Create new Recit</h1>
 
     {{ include('recit/_form.html.twig') }}
 
     <a href="{{ path('recit_index') }}">back to list</a>
+</div>
 {% endblock %}

@@ -28,7 +28,7 @@
                 {% if article.image %}
                 <img src="{{ asset('/build/images/' ~ article.image) | imagine_filter('index')  }}" class="card-img-top" alt="...">
                 {% else %}
-                <img src="{{ asset('/build/images/flag.jpg' ) | imagine_filter('index') }}" class="card-img-top" alt="drapeau mauritanie">
+                <img src="{{ asset('/build/images/newflag.jpg' ) | imagine_filter('index') }}" class="card-img-top" alt="drapeau mauritanie">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ article.titre }} </h5>
@@ -62,7 +62,7 @@
                         <img src="..." class="card-img-top" alt="...">
                     {% else %}
 
-                        <img src="{{ asset('/build/images/flag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
+                        <img src="{{ asset('/build/images/newflag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ recit.titre }} </h5>

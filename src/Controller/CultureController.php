@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\ArticleRepository;
+use App\Repository\RecitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,14 +18,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class CultureController extends AbstractController
 {
     /**
-     * @Route("/cuisine", name="culture")
+     * @Route("/cuisine", name="cuisine")
      */
-    public function cuisine(): Response
+    public function cuisine(ArticleRepository $articleRepository, RecitRepository $recitRepository): Response
     {
+        $tag = "Cuisine";
+
+        $recitsTag = $recitRepository->findAllByTag($tag);
+        $articlesTag = $articleRepository->findAllByTag($tag);
+
+        dd($recitsTag, $articlesTag);
 
 
-
-        return $this->render('cuisine/index.html.twig', [
+        return $this->render('culture/cuisine.html.twig', [
             'controller_name' => 'CultureController',
         ]);
     }
@@ -37,7 +44,7 @@ class CultureController extends AbstractController
 
 
 
-        return $this->render('litterature/index.html.twig', [
+        return $this->render('culture/litterature.html.twig', [
             'controller_name' => 'CultureController',
         ]);
     }
@@ -51,7 +58,7 @@ class CultureController extends AbstractController
 
 
 
-        return $this->render('musique/index.html.twig', [
+        return $this->render('culture/musique.html.twig', [
             'controller_name' => 'CultureController',
         ]);
     }
@@ -65,7 +72,7 @@ class CultureController extends AbstractController
 
 
 
-        return $this->render('tourisme/index.html.twig', [
+        return $this->render('culture/tourisme.html.twig', [
             'controller_name' => 'CultureController',
         ]);
     }

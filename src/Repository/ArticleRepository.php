@@ -16,8 +16,21 @@ class ArticleRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Article::class);
+        parent::__construct($registry,Article::class);
     }
+
+    public function findAllByTag($tag){
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.tag = :tag')
+            ->setParameter('tag', $tag)
+            ->orderBy('views', 'ASC')
+            //->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
+
+
+
 
     // /**
     //  * @return Article[] Returns an array of Article objects

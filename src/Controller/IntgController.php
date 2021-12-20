@@ -4,12 +4,15 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Entity\Recit;
+use App\Entity\Tag;
 use App\Entity\Ville;
 use App\Form\ArticleType;
 use App\Form\RecitType;
+use App\Form\TagType;
 use App\Form\VilleType;
 use App\Repository\ArticleRepository;
 use App\Repository\RecitRepository;
+use App\Repository\TagRepository;
 use App\Repository\VilleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,16 +31,29 @@ class IntgController extends AbstractController
     /**
      * @Route("/main", name="intg")
      */
-    public function index(ArticleRepository $articleRepository, RecitRepository $recitRepository): Response
+    public function index(TagRepository $tagRepository, Request $request): Response
     {
-        $list = $articleRepository->findAll();
-        $recits = $recitRepository->findAll();
+        $tags = $tagRepository->findAll();
+
+        //Formulaire ajout Tag
+        $tag = new Tag();
+        $formTag= $this->createForm(TagType::class, $tag);
+        $formTag->handleRequest($request);
+        if($formTag->isSubmitted() && $formTag->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($tag);
+            $em->flush();
+            $this->addFlash("success", " Tag ajouté ! ");
+            return $this->redirectToRoute('intg', [], Response::HTTP_SEE_OTHER);
+
+        }
+
 
 
         return $this->render('intg/index.html.twig', [
             'controller_name' => 'IntgController',
-            'list' => $list,
-            'recits' => $recits
+            'tags' => $tags,
+            'formTag' => $formTag->createView()
 
         ]);
     }

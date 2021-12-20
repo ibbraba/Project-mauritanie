@@ -20,10 +20,25 @@
 
        <a class="btn btn-light" href="{{ path("intg_recit") }}">Catégorie Récits</a>
        <a class="btn btn-light" href="{{ path("intg_article") }}">Catégorie Articles</a>
-
-
-
    </div>
+
+    <div class="margin-60 center">
+        <h3>Editer les tags</h3>
+        <ul>
+        {% for tag in tags %}
+
+        <li> {{ tag.name }}
+        </li>
+
+        {% endfor %}
+
+            {{ form(formTag) }}
+
+        </ul>
+
+
+
+    </div>
 
 {% else %}
     <p>Vous n'êtes pas identifié</p>

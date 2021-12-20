@@ -19,6 +19,17 @@ class RecitRepository extends ServiceEntityRepository
         parent::__construct($registry, Recit::class);
     }
 
+    public function findAllByTag($tag){
+        return $this->createQueryBuilder('a')
+            ->from("recit_tag")
+            ->andWhere('a.tag = :tag')
+
+            ->setParameter('tag', $tag)
+            ->orderBy('views', 'ASC')
+            //->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
 
     /*
      *

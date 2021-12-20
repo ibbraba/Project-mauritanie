@@ -31,5 +31,14 @@ TODO: Revisit article structure (main category + many tags)
 -Creating ManyToMany doctrine association (tags-Article / tags-Recit / Ville-Article / Ville-Recit)
 -Creating pages cities and single page for cities
 -Creating single INTG page for article and récit edition
--TODO: Edit Recit/article form: add cities and tag SELECT
+-DONE: Edit Recit/article form: add cities and tag SELECT
 TODO: Create sections most viewed article per cities (country?)
+
+
+20/12/21 (shallow):
+
+-Addings tags
+-Form Article/Recit with tags and cities
+-TODO: SQL join tables in repositories for each route
+-TODO: Single Pages Cities and Culture Tags
+-Project TODO: Create dateTime and wheather widget
