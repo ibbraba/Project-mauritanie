@@ -22,27 +22,29 @@
     <div id="section" class="index index-articles">
 
         <h4>Articles à la une</h4>
-        <div class="articles-card">
-            {% for article in articles %}
-            <div class="index-card card" style="width: 33.3%;">
-                {% if article.image %}
-                <img src="{{ asset('/build/images/' ~ article.image) | imagine_filter('index')  }}" class="card-img-top" alt="...">
-                {% else %}
-                <img src="{{ asset('/build/images/newflag.jpg' ) | imagine_filter('index') }}" class="card-img-top" alt="drapeau mauritanie">
-                {% endif %}
-                <div class="card-body">
+        {% for article in articles %}
+        <div class="post-card-display">
+
+                <div class="post-card-image">
+                    {% if article.image %}
+                        <img src="{{ asset('/build/images/' ~ article.image) | imagine_filter('card')  }}" class="card-img-top" alt="...">
+                    {% else %}
+                        <img src="{{ asset('/build/images/newflag.jpg' ) | imagine_filter('card') }}" class="card-img-top" alt="drapeau mauritanie">
+                    {% endif %}
+                </div>
+
+                <div class="middle-post">
                     <h5 class="card-title">{{ article.titre }} </h5>
                     <p class="card-text">{{ article.preview }}</p>
                     <a href="{{ path("article_show", {id:article.id} )}}" class="btn btn-light">Lire l'article</a>
                 </div>
-            </div>
 
-
-
-
-            {% endfor %}
+                <div class="post-card-tag">
+                    <p>Article</p>
+                </div>
 
         </div>
+        {% endfor %}
 
 
 
@@ -53,27 +55,28 @@
 
 
 
-    <div class="index index-recits">
+    <div class="index index-recits">*
         <h4>Des récits variés proposés par des mauritaniens </h4>
-        <div class="recits-card">
             {% for recit in recits %}
-                <div class="index-card card" style="width: 33.3%;">
+        <div class="post-card-display">
+                <div class="post-card-image" style="width: 33.3%;">
                     {% if recit.image %}
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="{{ asset('/build/images/' ~  recit.image| imagine_filter("card") ) }}..." class="card-img-top" alt="...">
                     {% else %}
-
-                        <img src="{{ asset('/build/images/newflag.jpg' ) }}" class="card-img-top" alt="drapeau mauritanie">
+                        <img src="{{ asset('/build/images/newflag.jpg' ) | imagine_filter('card') }}" class="card-img-top" alt="drapeau mauritanie">
                     {% endif %}
-                    <div class="card-body">
+                </div>
+
+                <div class="middle-post">
                         <h5 class="card-title">{{ recit.titre }} </h5>
                         <p class="card-text">{{ recit.description }}</p>
                         <a href="{{ path("recit_show", {id:recit.id})  }}" class="btn btn-light">Lire le récit</a>
-                    </div>
                 </div>
 
-
-
-
+                <div class="post-card-tag">
+                    <p>Article</p>
+                </div>
+        </div>
             {% endfor %}
 
         </div>

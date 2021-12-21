@@ -2,24 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8c79a-4c4e-4e6e-bbb2-1beec18fc726" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/newflag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/post-card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CultureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CultureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IntgController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IntgController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecitType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/RecitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecitRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/intg/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/intg/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/culture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/culture.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/culture/cuisine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/culture/cuisine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/culture/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/culture/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/culture/litterature.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/culture/litterature.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/culture/musique.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/culture/musique.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/culture/tourisme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/culture/tourisme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recit/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recit/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recit/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recit/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +247,7 @@
       <workItem from="1639640205242" duration="11437000" />
       <workItem from="1639749044424" duration="14425000" />
       <workItem from="1639765908106" duration="16378000" />
-      <workItem from="1639987284909" duration="7140000" />
+      <workItem from="1639987284909" duration="21348000" />
     </task>
     <servers />
   </component>

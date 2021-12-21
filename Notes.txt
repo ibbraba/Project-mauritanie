@@ -41,4 +41,11 @@ TODO: Create sections most viewed article per cities (country?)
 -Form Article/Recit with tags and cities
 -TODO: SQL join tables in repositories for each route
 -TODO: Single Pages Cities and Culture Tags
--Project TODO: Create dateTime and wheather widget
+-Project TODO: Create dateTime and whether widget
+
+21/12/21:
+-DONE: SQL ManyToMany articles/Recits fetch for each culture category
+-DONE : Display Posts in each culture category
+-TODO: Finish index page with new posts displays (fix bug index blocs display on others pages)
+
+

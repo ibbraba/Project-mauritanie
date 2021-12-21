@@ -1,4 +1,37 @@
 {% extends 'base.html.twig' %}
 
 
-{% block content %}{% endblock %}
+{% block content %}
+
+    {% for recit in recits %}
+        <div class="post-card-display">
+            <div class="post-card-tag">{{ tagName }}</div>
+
+            <div class="middle-post">
+                <div class="post-card-title"> {{ recit.titre }} </div>
+                <div class="post-card-preview">{{ recit.description }}</div>
+                <a href="{{ path("recit_show", {id:recit.id} )}}" class="btn btn-light">Lire le récit</a>
+            </div>
+
+            <div class="post-card-image">
+
+                {% if recit.image %}
+                    <img src="{{ asset('/build/images/' ~ recit.image) | imagine_filter('index')  }}" class="card-img-top" alt="...">
+                {% else %}
+                    <img src="{{ asset('/build/images/newflag.jpg' ) | imagine_filter('index') }}" class="card-img-top" alt="drapeau mauritanie">
+                {% endif %}
+
+            </div>
+
+
+        </div>
+
+
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}

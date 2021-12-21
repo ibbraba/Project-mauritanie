@@ -13,6 +13,14 @@ liip_imagine:
                     size: [400, 300]
                     mode: outbound
 
+        card:
+            quality: 80 # Compression quality, this image will be 75% the quality
+            filters: # These are the filters of the filter set, many filters can be applied
+                   # Scale and shrink the image to the given size, with a possible crop of the image
+                thumbnail:
+                    size: [ 250, 187.5 ]
+                    mode: outbound
+
         # Shrink the image to 350px wide, the image will keep aspect ratio and adapt the height accordingly
         small:
             quality: 80

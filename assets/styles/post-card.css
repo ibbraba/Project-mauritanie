@@ -1,0 +1,29 @@
+.post-card-display {
+    display: flex;
+    justify-content: space-between;
+    border: 17px solid var(--light);
+    max-height: 250px;
+    margin: 40px 1px;
+    border-radius: 12px;
+}
+
+
+
+
+.post-card-tag{
+    background-color: var(--dark);
+}
+
+
+.post-card-title{
+    text-align: center;
+}
+
+.middle-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+
+
