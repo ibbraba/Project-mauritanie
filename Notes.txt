@@ -49,3 +49,5 @@ TODO: Create sections most viewed article per cities (country?)
 -TODO: Finish index page with new posts displays (fix bug index blocs display on others pages)
 
 
+05/01/21:
+-TODO Redo Admin with EasyAdmin
