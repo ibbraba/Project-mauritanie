@@ -7,6 +7,8 @@
 {% block content %}
 
 
+{#    <app-meteo></app-meteo>#}
+
     <div name="top" class="welcome"> <h1>Bienvenue sur Zone Mauritanienne</h1>
     <p>Découvrez tout ce que la Mauritanie a de plus beau a nous offrir</p>
 
@@ -30,7 +32,7 @@
                         <img src="{{ asset('/build/images/' ~ article.image) | imagine_filter('card')  }}" class="card-img-top" alt="...">
                     {% else %}
                         <img src="{{ asset('/build/images/newflag.jpg' ) | imagine_filter('card') }}" class="card-img-top" alt="drapeau mauritanie">
-                    {% endif %}
+                      {% endif %}
                 </div>
 
                 <div class="middle-post">
@@ -39,9 +41,6 @@
                     <a href="{{ path("article_show", {id:article.id} )}}" class="btn btn-light">Lire l'article</a>
                 </div>
 
-                <div class="post-card-tag">
-                    <p>Article</p>
-                </div>
 
         </div>
         {% endfor %}
@@ -73,9 +72,7 @@
                         <a href="{{ path("recit_show", {id:recit.id})  }}" class="btn btn-light">Lire le récit</a>
                 </div>
 
-                <div class="post-card-tag">
-                    <p>Article</p>
-                </div>
+              
         </div>
             {% endfor %}
 

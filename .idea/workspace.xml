@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e8c79a-4c4e-4e6e-bbb2-1beec18fc726" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Mauritanieproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mauritanieproject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/sonata_form.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/sonata_admin.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IntgController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IntgController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ville.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ville.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/TestFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/TestFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +180,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/PostsFormTest" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="ts.external.directory.path" value="C:\wamp64\www\Mauritanieproject\src\App\AngularFrontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -240,7 +230,12 @@
       <workItem from="1639987284909" duration="22031000" />
       <workItem from="1640689425012" duration="2535000" />
       <workItem from="1640944497685" duration="709000" />
-      <workItem from="1641372225678" duration="7477000" />
+      <workItem from="1641372225678" duration="9354000" />
+      <workItem from="1641652529484" duration="92000" />
+      <workItem from="1641828562964" duration="594000" />
+      <workItem from="1641907008720" duration="2098000" />
+      <workItem from="1642673402276" duration="1801000" />
+      <workItem from="1642759945142" duration="4065000" />
     </task>
     <servers />
   </component>

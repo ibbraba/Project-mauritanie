@@ -76,7 +76,7 @@ class ArticleCrudController extends AbstractCrudController
             IntegerField::new("views")->setDisabled(),
             DateTimeField::new("date")->setLabel("Crée le")->setDisabled(),
 
-            ImageField::new("image")->setLabel("Image")->hideOnIndex(),
+          //  ImageField::new("image")->setLabel("Image")->hideOnIndex(),
             TextEditorField::new("contenu")->hideOnIndex()->setLabel("Contenu"),
 
         ];

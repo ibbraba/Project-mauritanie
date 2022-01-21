@@ -51,3 +51,7 @@ TODO: Create sections most viewed article per cities (country?)
 
 05/01/21:
 -TODO Redo Admin with EasyAdmin
+
+
+21/01/21:
+-Wheather API : Try to display Wheather in index
